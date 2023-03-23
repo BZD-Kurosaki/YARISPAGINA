@@ -24,5 +24,38 @@
 }
 .sau2{
     padding: 30px;
-    background: #1d1f1d
+    background: #218030
+}
+
+.contact2{
+    padding-top: 20px;
+    background: #218030;
+    padding-bottom: 0;
+}
+
+.content2 {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: #4CAF50; /* Color de fondo del botón */
+    border: none; /* Quita el borde del botón */
+    color: white; /* Color del texto del botón */
+    padding: 10px 20px; /* Ajusta el espacio interno del botón */
+    text-align: center; /* Centra el texto del botón */
+    text-decoration: none; /* Quita la decoración de texto del botón */
+    display: inline-block; /* Permite que el botón se muestre en línea con el resto del contenido */
+    font-size: 16px; /* Ajusta el tamaño del texto del botón */
+    margin: 10px; /* Agrega un margen alrededor del botón */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+    border-radius: 20px; /* Ajusta el radio de los bordes del botón */
+    transition: background-color 0.3s ease; /* Agrega una transición suave al color de fondo */
+}
+
+.button:hover {
+    background-color: #ff0000; /* Cambia el color de fondo del botón al pasar el cursor sobre él */
 }

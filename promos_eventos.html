@@ -24,8 +24,34 @@
                 <a href="productos.html">Productos</a>
             </nav>
     </div>
+     
+    <section class="content2 contact2">
+        <h1 class="title">ZONA DE EVENTOS</h1>
+        <p>
+            Aqui estaremos informando sobre los futuros eventos que vaya realizando el Yary's 
+        </p>
+    </section>
+    <div id="image-chain">
+        <img src="img/copa_greed.jpg" alt="copa_greed">
+        <img src="img/copa_greed_2.jpg" alt="copa_greed_2" style="display: none;">
+        <img src="img/copa.jpg" alt="copa" style="display: none;">
+    </div>
 
-    <br><br><br>
+    <section class="button">
+    <button onclick="showNextImage()">CLICK PARA LA SIGUIENTE IMAGEN</button>
+    </section>
+
+    <script>
+        var imageIndex = 1;
+        var images = document.getElementById("image-chain").getElementsByTagName("img");
+    
+        function showNextImage() {
+            images[imageIndex-1].style.display = "none";
+            imageIndex = (imageIndex == images.length) ? 1 : imageIndex + 1;
+            images[imageIndex-1].style.display = "inline-block";
+        }
+    </script>
+
     <section class="content sau2">
         <br><br><br>
         <h2 class="title">PROMOCIONES Y BENEFICIOS</h2>
@@ -54,11 +80,7 @@
                     <li>Y por la compra de 6 horas SERA POR S/. 15</li>
                     
             </div>
-
         </div>
-
     </section>
-
-
     </body>
 </html>
