@@ -31,26 +31,29 @@
             Aqui estaremos informando sobre los futuros eventos que vaya realizando el Yary's 
         </p>
     </section>
+    <br><br>
     <div id="image-chain">
         <img src="img/copa_greed.jpg" alt="copa_greed">
         <img src="img/copa_greed_2.jpg" alt="copa_greed_2" style="display: none;">
         <img src="img/copa.jpg" alt="copa" style="display: none;">
     </div>
-
-    <section class="button">
-    <button onclick="showNextImage()">CLICK PARA LA SIGUIENTE IMAGEN</button>
-    </section>
-
-    <script>
+    <br><br>
+    <section class="my-button">
+        <button onclick="showNextImage()" class="button-green">CLICK PARA LA SIGUIENTE IMAGEN</button>
+      </section>
+      
+      <script>
         var imageIndex = 1;
         var images = document.getElementById("image-chain").getElementsByTagName("img");
-    
+      
         function showNextImage() {
-            images[imageIndex-1].style.display = "none";
-            imageIndex = (imageIndex == images.length) ? 1 : imageIndex + 1;
-            images[imageIndex-1].style.display = "inline-block";
+          images[imageIndex-1].style.display = "none";
+          imageIndex = (imageIndex == images.length) ? 1 : imageIndex + 1;
+          images[imageIndex-1].style.display = "inline-block";
         }
-    </script>
+      </script>  
+
+    <br><br>
 
     <section class="content sau2">
         <br><br><br>
