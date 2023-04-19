@@ -1,0 +1,33 @@
+/* Estilo de los contenedores de cada recuadro */
+.box {
+    width: 30%;
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(230, 22, 22, 0.823);
+  }
+  
+  /* Estilo de la imagen */
+  .box img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  /* Estilo del texto */
+  .box p {
+    padding: 10px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #218030;
+  }
+  
+  /* Estilo del título */
+  .box h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #444;
+  }
