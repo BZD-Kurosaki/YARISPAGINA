@@ -28,61 +28,322 @@
     
     <main>
         
-        <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Recuadros con imagen y texto</title>
-  </head>
+     
   <br><br>
   <br><br>
   <body>
     <!-- Contenedor de los recuadros -->
     <div class="container">
       <!-- Primer recuadro -->
+
+      <a href="#">
+        <div class="box" onclick="showModal2()">
+          <img src="img/mouse-logitech.jpg" alt="Imagen del primer recuadro">
+          <h2 style="color: red">Logitech G502 Hero</h2>
+          <p>Es un mouse para juegos de alta precisión con 11 botones programables y un diseño ergonómico adaptable.</p>
+        </div>
+      </a>
       
-      <div class="box">
-        <img src="img/mouse-logitech.jpg" alt="Imagen del primer recuadro">
-        <h2 style="color: red">Logitech G502 Hero</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis blandit nisi, eget cursus lorem ultrices eu.</p>
+      <div id="myModal2" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="hideModal2()">&times;</span>
+          <div class="product-info">
+            <p style="color: #00ff33;">¡¡¡¡CONTACTANOS!!!!</p>
+            <div class="left-section">
+              <p>DISPONIBLE EN STOCK, RESERVA EL TUYO YA.</p>
+            </div>
+            <div class="product-info">
+              <img class="product-image" src="img/logitech2.jpg" alt="Imagen del producto">
+              <br>
+              <a class="button" href="https://www.facebook.com/MrGreedLanCenter">ESCRÍBENOS AQUI</a>
+            </div>
+          </div>
+        </div>
       </div>
       
+      <script>
+        var modal2 = document.getElementById("myModal2");
+      
+        function showModal2() {
+          modal2.style.display = "block";
+          modal2.classList.remove("fade-out");
+          modal2.classList.add("fade-in"); 
+        }
+        
+        function hideModal2() {
+          modal2.classList.remove("fade-in");
+          modal2.classList.add("fade-out"); 
+          setTimeout(function() {
+            modal2.style.display = "none";
+            modal2.classList.remove("fade-out"); 
+          }, 500); 
+        }
+        
+        window.onclick = function(event2) {
+          if (event2.target == modal2) {
+            hideModal2();
+          }
+        }
+      </script>
+
       <!-- Segundo recuadro -->
-      <div class="box">
-        <img src="img/RTX.jpg" alt="Imagen del segundo recuadro">
-        <h2 style="color: red">GeForce Rtx 3050</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis blandit nisi, eget cursus lorem ultrices eu.</p>
+
+      <a href="#">
+        <div class="box">
+          <img src="img/RTX.jpg" alt="Imagen del segundo recuadro" onclick="showModal()">
+          <h2 style="color: red">GeForce Rtx 3050</h2>
+          <p>Es una tarjeta gráfica de NVIDIA, con 2048 núcleos y 4GB de memoria. Soporta trazado de rayos y DLSS de NVIDIA, es compatible con 
+            DirectX 12 Ultimate.</p>
+        </div>
+      </a>
+      
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="hideModal()">&times;</span>
+          <div class="product-info">
+            <p style="color: #00ff33;">¡¡¡¡CONTACTANOS!!!!</p>
+            <div class="left-section">
+              <p>DISPONIBLE EN STOCK, RESERVA EL TUYO YA.</p>
+            </div>
+            <div class="product-info">
+              <img class="product-image" src="img/RTGX 3050 2.jpeg" alt="Imagen del producto">
+              <br>
+            <a class="button" href="https://www.facebook.com/MrGreedLanCenter">ESCRÍBENOS AQUI</a>
+            </div>
+          </div>
+        </div>
       </div>
       
+      <script>      
+      var modal = document.getElementById("myModal");
+      var imgLink = document.querySelector(".box img");
+      
+      function showModal() {
+        modal.style.display = "block";
+      }
+      
+      function hideModal() {
+        var modalContent = document.querySelector(".modal-content");
+        modalContent.style.animation = "scale-out 0.3s ease-in-out forwards";
+        modal.style.animation = "fade-out 0.5s ease-in-out forwards"; 
+        setTimeout(function() {
+          modal.style.display = "none";
+          modalContent.style.animation = "";
+          modal.style.animation = ""; 
+        }, 500); 
+      }
+      
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          hideModal();
+        }
+      }
+      </script>
+
       <!-- Tercer recuadro -->
-      <div class="box">
-        <img src="img/I5.jpg" alt="Imagen del tercer recuadro">
-        <h2 style="color: red">Intel Core i5-9600K 3.70 GHz</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis blandit nisi, eget cursus lorem ultrices eu.</p>
+      <a href="#">
+        <div class="box">
+          <img src="img/I5.jpg" alt="Imagen del tercer recuadro" onclick="showModal3()">
+          <h2 style="color: red">Intel Core i5-9600K 3.70 GHz</h2>
+          <p>Es un procesador de 6 núcleos con velocidad base de 3.70 GHz y velocidad máxima de turbo de 4.60 GHz.</p>
+        </div>
+       </a> 
+
+      <div id="myModal3" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="hideModal3()">&times;</span>
+          <div class="product-info">
+            <p style="color: #00ff33;">¡¡¡¡CONTACTANOS!!!!</p>
+            <div class="left-section">
+              <p>DISPONIBLE EN STOCK, RESERVA EL TUYO YA.</p>
+            </div>
+            <div class="product-info">
+              <img class="product-image" src="img/intel core 5.jpg" alt="Imagen del producto">
+              <br>
+              <a class="button" href="https://www.facebook.com/MrGreedLanCenter">ESCRÍBENOS AQUI</a>
+            </div>
+          </div>
+        </div>
       </div>
       
+      <script>
+        var modal3 = document.getElementById("myModal3");
+      
+        function showModal3() {
+          modal3.style.display = "block";
+          modal3.classList.remove("fade-out");
+          modal3.classList.add("fade-in"); 
+        }
+        
+        function hideModal3() {
+          modal3.classList.remove("fade-in");
+          modal3.classList.add("fade-out"); 
+          setTimeout(function() {
+            modal3.style.display = "none";
+            modal3.classList.remove("fade-out"); 
+          }, 500); 
+        }
+        
+        window.onclick = function(event3) {
+          if (event3.target == modal3) {
+            hideModal3();
+          }
+        }
+      </script>
+
       <!-- Cuarto recuadro -->
-      <div class="box">
-        <img src="img/audifonos-rivals.webp" alt="Imagen del cuarto recuadro">
-        <h2 style="color: red">Audífonos Rivals Mercury 5.1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis blandit nisi, eget cursus lorem ultrices eu.</p>
+      <a href="#">
+        <div class="box">
+          <img src="img/audifonos-rivals.webp" alt="Imagen del cuarto recuadro" onclick="showModal4()">
+          <h2 style="color: red">Audífonos Rivals Mercury 5.1</h2>
+          <p>Cuenta con altavoces de neodimio de 50 mm para ofrecer un sonido envolvente de alta calidad. Son ajustables y acolchados para mayor comodidad.</p>
+        </div>
+      </a>
+      
+      <div id="myModal4" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="hideModal4()">&times;</span>
+          <div class="product-info">
+            <p style="color: #00ff33;">¡¡¡¡CONTACTANOS!!!!</p>
+            <div class="left-section">
+              <p>DISPONIBLE EN STOCK, RESERVA EL TUYO YA.</p>
+            </div>
+            <div class="product-info">
+              <img class="product-image" src="img/rivals.jpg" alt="Imagen del producto">
+              <br>
+              <a class="button" href="https://www.facebook.com/MrGreedLanCenter">ESCRÍBENOS AQUI</a>
+            </div>
+          </div>
+        </div>
       </div>
       
+      <script>
+        var modal4 = document.getElementById("myModal4");
+      
+        function showModal4() {
+          modal4.style.display = "block";
+          modal4.classList.remove("fade-out");
+          modal4.classList.add("fade-in"); 
+        }
+        
+        function hideModal4() {
+          modal4.classList.remove("fade-in");
+          modal4.classList.add("fade-out"); 
+          setTimeout(function() {
+            modal4.style.display = "none";
+            modal4.classList.remove("fade-out"); 
+          }, 500); 
+        }
+        
+        window.onclick = function(event4) {
+          if (event4.target == modal4) {
+            hideModal4();
+          }
+        }
+      </script>
+
       <!-- Quinto recuadro -->
-      <div class="box">
-        <img src="img/AULA-S603-AUDIFONOS.webp" alt="Imagen del quinto
-         recuadro">
-        <h2 style="color: red">Gaming Headset AULA Mountain S603</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis blandit nisi, eget cursus lorem ultrices eu.</p>
+      <a href="#">
+        <div class="box">
+          <img src="img/AULA-S603-AUDIFONOS.webp" alt="Imagen del quinto recuadro" onclick="showModal5()">
+          <h2 style="color: red">Gaming Headset AULA Mountain S603</h2>
+          <p>Diseño ergonómico, ofrece un sonido envolvente de alta calidad y cuenta con un micrófono flexible. Además, cuenta con controles de volumen y un interruptor de micrófono en línea.</p>
+        </div>
+      </a>
+
+      <div id="myModal5" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="hideModal5()">&times;</span>
+          <div class="product-info">
+            <p style="color: #00ff33;">¡¡¡¡CONTACTANOS!!!!</p>
+            <div class="left-section">
+              <p>DISPONIBLE EN STOCK, RESERVA EL TUYO YA.</p>
+            </div>
+            <div class="product-info">
+              <img class="product-image" src="img/gaming aula s603.png" alt="Imagen del producto">
+              <br>
+              <a class="button" href="https://www.facebook.com/MrGreedLanCenter">ESCRÍBENOS AQUI</a>
+            </div>
+          </div>
+        </div>
       </div>
+      
+      <script>
+        var modal5 = document.getElementById("myModal5");
+      
+        function showModal5() {
+          modal5.style.display = "block";
+          modal5.classList.remove("fade-out");
+          modal5.classList.add("fade-in"); 
+        }
+        
+        function hideModal5() {
+          modal5.classList.remove("fade-in");
+          modal5.classList.add("fade-out"); 
+          setTimeout(function() {
+            modal5.style.display = "none";
+            modal5.classList.remove("fade-out"); 
+          }, 500); 
+        }
+        
+        window.onclick = function(event5) {
+          if (event5.target == modal5) {
+            hideModal5();
+          }
+        }
+      </script>
 
       <!-- Sexto recuadro -->
+      <a href="#">
         <div class="box">
-            <img src="img/Aula-BREATHING.png" alt="Imagen del sexto recuadro">
+            <img src="img/Aula-BREATHING.png" alt="Imagen del sexto recuadro" onclick="showModal6()">
             <h2 style="color: red">Audifonos de alta sensibilidad - 3.5+USB</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis blandit nisi, eget cursus lorem ultrices eu.</p>
+            <p> Tienen dos opciones de conexión, 3.5mm y USB, y son compatibles con una amplia variedad de dispositivos. Son ideales para aquellos que buscan una experiencia auditiva de mayor calidad y versatilidad.</p>
         </div>
-  
+      </a>
 
+      <div id="myModal6" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="hideModal6()">&times;</span>
+          <div class="product-info">
+            <p style="color: #00ff33;">¡¡¡¡CONTACTANOS!!!!</p>
+            <div class="left-section">
+              <p>DISPONIBLE EN STOCK, RESERVA EL TUYO YA.</p>
+            </div>
+            <div class="product-info">
+              <img class="product-image" src="img/audifonos alta sensibilidad.jpg" alt="Imagen del producto">
+              <br>
+              <a class="button" href="https://www.facebook.com/MrGreedLanCenter">ESCRÍBENOS AQUI</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        var modal6 = document.getElementById("myModal6");
+      
+        function showModal6() {
+          modal6.style.display = "block";
+          modal6.classList.remove("fade-out");
+          modal6.classList.add("fade-in"); 
+        }
+        
+        function hideModal6() {
+          modal6.classList.remove("fade-in");
+          modal6.classList.add("fade-out"); 
+          setTimeout(function() {
+            modal6.style.display = "none";
+            modal6.classList.remove("fade-out"); 
+          }, 500); 
+        }
+        
+        window.onclick = function(event5) {
+          if (event5.target == modal6) {
+            hideModal6();
+          }
+        }
+      </script>
+
+        <br><br><br>
     </body>
 </html>
