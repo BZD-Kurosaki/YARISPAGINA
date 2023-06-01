@@ -3,7 +3,7 @@
     font-size: 50px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #fff;
+    color: rgb(238, 15, 15);
 }
 .box-container {
     display: flex;
